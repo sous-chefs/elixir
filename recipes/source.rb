@@ -25,13 +25,13 @@ bash "elixir-make-clean" do
   cwd node[:elixir][:install_path]
   code "make clean"
 
-  subscribes :run, "git[elixir]"
+  action :nothing
+  subscribes :run, "git[elixir]", :immediately
 end
 
 bash "elixir-make" do
   cwd node[:elixir][:install_path]
   code "make"
-  timeout 300
 
   action :run
 end
