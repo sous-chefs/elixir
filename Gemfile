@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "chefspec", '~> 3.0'
 gem "berkshelf", github: "RiotGames/berkshelf"
 gem "vagrant", github: "mitchellh/vagrant", tag: "v1.3.5"
 gem "vagrant-berkshelf", github: "RiotGames/vagrant-berkshelf"
