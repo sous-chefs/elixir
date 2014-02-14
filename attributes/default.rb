@@ -7,4 +7,4 @@
 
 default[:elixir][:install_path]      = "/usr/local/lib/elixir"
 default[:elixir][:source][:repo]     = "https://github.com/elixir-lang/elixir.git"
-default[:elixir][:source][:revision] = "v0.12.3"
+default[:elixir][:source][:revision] = "v0.12.4"
