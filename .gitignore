@@ -1,4 +1,5 @@
 .vagrant
+.kitchen
 Berksfile.lock
 *~
 *#

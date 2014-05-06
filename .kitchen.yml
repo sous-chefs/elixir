@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[elixir::default]
