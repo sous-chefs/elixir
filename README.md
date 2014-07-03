@@ -40,9 +40,7 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
 
 ## Usage
 
-### elixir::default
-
-Include `elixir` in your node's `run_list`:
+Include `elixir` in your node's `run_list`
 
 ```json
 {
@@ -52,7 +50,19 @@ Include `elixir` in your node's `run_list`:
 }
 ```
 
+### elixir::default
+
+This delegates to the `elixir::source` recipe.
+
+### elixir::source
+
 _Note: You must have at least 1GB of memory to compile Elixir from source_
+
+This will install Elixir and Erlang from source.
+
+### elixir::package
+
+This will install Elixir and Erlang from packages provided by [erlang-solutions](https://www.erlang-solutions.com/downloads).
 
 ## License and Authors
 
