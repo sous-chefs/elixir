@@ -2,7 +2,7 @@
 # Cookbook Name:: elixir
 # Attributes:: default
 #
-# Copyright (C) 2013 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 default[:elixir][:install_path]      = "/usr/local/lib/elixir"

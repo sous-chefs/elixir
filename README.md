@@ -34,7 +34,7 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
     <td><tt>[:elixir][:source][:revision]</tt></td>
     <td>String</td>
     <td>Version of Elixir to compile</td>
-    <td><tt>"v0.11.2"</tt></td>
+    <td><tt>"v0.14.2"</tt></td>
   </tr>
 </table>
 
@@ -53,15 +53,6 @@ Include `elixir` in your node's `run_list`:
 ```
 
 _Note: You must have at least 1GB of memory to compile Elixir from source_
-
-## Contributing
-
-1. Fork the repository on Github
-2. Create a named feature branch (i.e. `add-new-recipe`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request
 
 ## License and Authors
 

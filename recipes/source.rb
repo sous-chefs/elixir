@@ -2,7 +2,7 @@
 # Cookbook Name:: elixir
 # Recipe:: source
 #
-# Copyright (C) 2013 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 node.set[:erlang][:install_method]    = "source"
