@@ -14,3 +14,6 @@ suites:
   - name: default
     run_list:
       - recipe[elixir::default]
+  - name: package
+    run_list:
+      - recipe[elixir::package]
