@@ -8,4 +8,6 @@ version          "0.7.0"
 
 depends "apt"
 depends "git"
+depends "github"
 depends "erlang"
+depends "libarchive", "~> 0.4"
