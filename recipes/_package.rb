@@ -1,12 +1,12 @@
 #
 # Cookbook Name:: elixir
-# Recipe:: package
+# Recipe:: _package
 #
 # Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 node.normal[:erlang][:esl][:version] = "1:17.1"
-elixir_path = File.join(node[:elixir][:versions_path], node[:elixir][:version])
+elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])
 
 include_recipe "apt::default"
 include_recipe "erlang::esl"

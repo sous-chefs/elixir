@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: elixir
-# Recipe:: source
+# Recipe:: _source
 #
 # Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #

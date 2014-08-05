@@ -13,7 +13,13 @@ platforms:
 suites:
   - name: package
     run_list:
-      - recipe[elixir::package]
+      - recipe[elixir::default]
+    attributes:
+      elixir:
+        install_method: "package"
   - name: source
     run_list:
-      - recipe[elixir::source]
+      - recipe[elixir::default]
+    attributes:
+      elixir:
+        install_method: "source"

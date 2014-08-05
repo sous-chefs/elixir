@@ -5,4 +5,5 @@
 # Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-include_recipe "elixir::package"
+ChefElixir.validate_attributes!(node)
+include_recipe "elixir::_#{node[:elixir][:install_method]}"

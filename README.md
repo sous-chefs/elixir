@@ -24,6 +24,13 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
   </tr>
 
   <tr>
+    <td><tt>[:elixir][:install_method]</tt></td>
+    <td>String</td>
+    <td>Method of installation: "package" or "source"</td>
+    <tr><tt>package</tt></tr>
+  </tr>
+
+  <tr>
     <td><tt>[:elixir][:source][:repo]</tt></td>
     <td>String</td>
     <td>Git source repository location</td>
@@ -52,7 +59,7 @@ Include `elixir` in your node's `run_list`
 
 ### elixir::default
 
-This delegates to the `elixir::source` recipe.
+This will install Elixir and Erlang on the node. By default, Elixir and Erlang will be installed from packages. If you want to install from source you can set the `node[:elixir][:install_method]` attribute.
 
 ### elixir::source
 
