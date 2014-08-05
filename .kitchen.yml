@@ -11,9 +11,9 @@ platforms:
   - name: ubuntu-12.04
 
 suites:
-  - name: default
-    run_list:
-      - recipe[elixir::default]
   - name: package
     run_list:
       - recipe[elixir::package]
+  - name: source
+    run_list:
+      - recipe[elixir::source]
