@@ -61,16 +61,6 @@ Include `elixir` in your node's `run_list`
 
 This will install Elixir and Erlang on the node. By default, Elixir and Erlang will be installed from packages. If you want to install from source you can set the `node[:elixir][:install_method]` attribute.
 
-### elixir::source
-
-_Note: You must have at least 1GB of memory to compile Elixir from source_
-
-This will install Elixir and Erlang from source.
-
-### elixir::package
-
-This will install Elixir and Erlang from packages provided by [erlang-solutions](https://www.erlang-solutions.com/downloads).
-
 ## License and Authors
 
 Author:: Jamie Winsor (<jamie@vialstudios.com>)
