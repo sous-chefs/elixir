@@ -16,13 +16,13 @@ include_recipe "git::default"
 git "elixir" do
   repository node[:elixir][:source][:repo]
   revision node[:elixir][:source][:revision]
-  destination node[:elixir][:install_path]
+  destination node[:elixir][:source][:_path]
 
   action :sync
 end
 
 bash "elixir-make-clean" do
-  cwd node[:elixir][:install_path]
+  cwd node[:elixir][:source][:_path]
   code "make clean"
 
   action :nothing
@@ -30,8 +30,12 @@ bash "elixir-make-clean" do
 end
 
 bash "elixir-make" do
-  cwd node[:elixir][:install_path]
+  cwd node[:elixir][:source][:_path]
   code "make"
 
   action :run
+end
+
+link node[:elixir][:install_path] do
+  to node[:elixir][:source][:_path]
 end

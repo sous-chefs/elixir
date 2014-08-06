@@ -6,6 +6,16 @@
 #
 
 ChefElixir.validate_attributes!(node)
+
+# Removes source installation before package/source methods were finalized in
+# version 0.8.0 of the Elixir cookbook. The install path should always be a
+# symlink. If it is not, then delete it and make sure it is.
+directory node[:elixir][:install_path] do
+  recursive true
+  action :delete
+  not_if "test -L #{node[:elixir][:install_path]}"
+end
+
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
 
 bin_path    = File.join(node[:elixir][:install_path], "bin")
