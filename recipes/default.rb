@@ -16,6 +16,10 @@ directory node[:elixir][:install_path] do
   not_if "test -L #{node[:elixir][:install_path]}"
 end
 
+directory node[:elixir][:_versions_path] do
+  recursive true
+end
+
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
 
 bin_path    = File.join(node[:elixir][:install_path], "bin")
