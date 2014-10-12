@@ -5,7 +5,13 @@
 # Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-node.normal[:erlang][:esl][:version] = "1:17.3"
+case node['platform_family']
+  when 'debian'
+    node.normal[:erlang][:esl][:version] = "1:17.3"
+  when 'rhel'
+    node.normal[:erlang][:esl][:version] = "17.3-1.el6"
+end
+
 elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])
 
 include_recipe "apt::default"
