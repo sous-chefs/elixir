@@ -15,7 +15,7 @@ include_recipe "git::default"
 
 git "elixir" do
   repository node[:elixir][:source][:repo]
-  revision node[:elixir][:source][:revision]
+  revision "v#{node[:elixir][:version]}"
   destination node[:elixir][:source][:_path]
 
   action :sync

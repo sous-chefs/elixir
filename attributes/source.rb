@@ -7,8 +7,7 @@
 
 include_attribute "elixir::default"
 
-default[:elixir][:source][:repo]     = "https://github.com/elixir-lang/elixir.git"
-default[:elixir][:source][:revision] = "v#{node[:elixir][:version]}"
+default[:elixir][:source][:repo] = "https://github.com/elixir-lang/elixir.git"
 
 #
 # Private
