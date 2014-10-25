@@ -20,7 +20,7 @@ include_recipe "libarchive"
 
 asset = github_asset "Precompiled.zip" do
   repo "elixir-lang/elixir"
-  release node[:elixir][:source][:revision]
+  release "v#{node[:elixir][:version]}"
 end
 
 directory elixir_path do
