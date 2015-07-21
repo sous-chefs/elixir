@@ -2,7 +2,7 @@
 # Cookbook Name:: elixir
 # Recipe:: default
 #
-# Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 ChefElixir.validate_attributes!(node)

@@ -2,7 +2,7 @@
 # Cookbook Name:: elixir
 # Library:: chef_elixir
 #
-# Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 module ChefElixir
