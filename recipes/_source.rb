@@ -2,13 +2,13 @@
 # Cookbook Name:: elixir
 # Recipe:: _source
 #
-# Copyright (C) 2013-2014 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 node.set[:erlang][:install_method]    = "source"
-node.set[:erlang][:source][:version]  = "17.5"
+node.set[:erlang][:source][:version]  = "18.0"
 node.set[:erlang][:source][:url]      = "http://erlang.org/download/otp_src_#{node[:erlang][:source][:version]}.tar.gz"
-node.set[:erlang][:source][:checksum] = "3c28820c981b30c50df8ac2a4a238e5813454fa3ed2ad530bc7948a282846474"
+node.set[:erlang][:source][:checksum] = "1cfbf8acd7702f285d76061b45c128853f47b5e0cdcdf19d51b2ee405075ff11"
 
 include_recipe "erlang::default"
 include_recipe "git::default"
