@@ -5,7 +5,7 @@
 # Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-ChefElixir.validate_attributes!(node)
+validate_attributes "elixir"
 
 # Removes source installation before package/source methods were finalized in
 # version 0.8.0 of the Elixir cookbook. The install path should always be a
