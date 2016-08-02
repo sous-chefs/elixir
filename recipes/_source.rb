@@ -6,9 +6,6 @@
 #
 
 node.set[:erlang][:install_method]    = "source"
-node.set[:erlang][:source][:version]  = "18.0"
-node.set[:erlang][:source][:url]      = "http://erlang.org/download/otp_src_#{node[:erlang][:source][:version]}.tar.gz"
-node.set[:erlang][:source][:checksum] = "1cfbf8acd7702f285d76061b45c128853f47b5e0cdcdf19d51b2ee405075ff11"
 
 include_recipe "erlang::default"
 include_recipe "git::default"
