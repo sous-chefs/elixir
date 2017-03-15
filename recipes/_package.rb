@@ -5,14 +5,8 @@
 # Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-case node['platform_family']
-when 'debian'
-  node.normal[:apt][:compile_time_update] = true
-end
-
 elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])
 
-include_recipe 'apt::default'
 include_recipe 'erlang::esl'
 include_recipe 'libarchive'
 
