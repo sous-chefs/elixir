@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: elixir
+# Cookbook:: elixir
 # Recipe:: _package
 #
-# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])

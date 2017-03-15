@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: elixir
+# Cookbook:: elixir
 # Attributes:: source
 #
-# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 include_attribute 'elixir::default'

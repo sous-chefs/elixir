@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: elixir
+# Cookbook:: elixir
 # Attributes:: default
 #
-# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 default[:elixir][:version]        = '1.4.2'

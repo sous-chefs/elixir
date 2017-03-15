@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: elixir
+# Cookbook:: elixir
 # Recipe:: _source
 #
-# Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 node.override[:erlang][:install_method] = 'source'
