@@ -1,10 +1,10 @@
-name             "elixir"
-maintainer       "Jamie Winsor"
-maintainer_email "jamie@vialstudios.com"
-license          "Apache 2.0"
-description      "Manages an Elixir installation"
-long_description IO.read(File.join(File.dirname(__FILE__), "README.md"))
-version          "0.12.0"
+name             'elixir'
+maintainer       'Chef Software, Inc.'
+maintainer_email 'cookbooks@chef.io'
+license          'Apache-2.0'
+description      'Manages an Elixir installation'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '0.12.0'
 
 depends "apt", ">= 2.5"
 depends "git"
