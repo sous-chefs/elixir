@@ -10,10 +10,10 @@ version          '0.12.0'
   supports os
 end
 
-depends 'git'
+depends 'git', '>= 5.0.0'
 depends 'github'
-depends 'erlang'
-depends 'libarchive'
+depends 'erlang', '>= 3.0.0'
+depends 'libarchive', '>= 0.7.0'
 depends 'validation', '>= 0.2.0'
 
 source_url 'https://github.com/chef-cookbooks/elixir'
