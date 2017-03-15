@@ -7,10 +7,10 @@
 
 include_attribute 'elixir::default'
 
-default[:elixir][:source][:repo] = 'https://github.com/elixir-lang/elixir.git'
+default['elixir']['source']['repo'] = 'https://github.com/elixir-lang/elixir.git'
 
 #
 # Private
 #
 
-force_override[:elixir][:source][:_path] = File.join(node[:elixir][:_versions_path], 'source')
+force_override['elixir']['source']['_path'] = File.join(node['elixir']['_versions_path'], 'source')
