@@ -5,12 +5,12 @@
 # Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-node.set[:erlang][:install_method]    = "source"
+node.set[:erlang][:install_method] = 'source'
 
-include_recipe "erlang::default"
-include_recipe "git::default"
+include_recipe 'erlang::default'
+include_recipe 'git::default'
 
-git "elixir" do
+git 'elixir' do
   repository node[:elixir][:source][:repo]
   revision "v#{node[:elixir][:version]}"
   destination node[:elixir][:source][:_path]
@@ -18,17 +18,17 @@ git "elixir" do
   action :sync
 end
 
-bash "elixir-make-clean" do
+bash 'elixir-make-clean' do
   cwd node[:elixir][:source][:_path]
-  code "make clean"
+  code 'make clean'
 
   action :nothing
-  subscribes :run, "git[elixir]", :immediately
+  subscribes :run, 'git[elixir]', :immediately
 end
 
-bash "elixir-make" do
+bash 'elixir-make' do
   cwd node[:elixir][:source][:_path]
-  code "make"
+  code 'make'
 
   action :run
 end

@@ -5,7 +5,7 @@
 # Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-validate_attributes "elixir"
+validate_attributes 'elixir'
 
 # Removes source installation before package/source methods were finalized in
 # version 0.8.0 of the Elixir cookbook. The install path should always be a
@@ -22,8 +22,8 @@ end
 
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
 
-bin_path    = File.join(node[:elixir][:install_path], "bin")
-executables = ["elixir", "elixirc", "iex", "mix"]
+bin_path    = File.join(node[:elixir][:install_path], 'bin')
+executables = %w(elixir elixirc iex mix)
 
 executables.each do |executable|
   link "/usr/bin/#{executable}" do
