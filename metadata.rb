@@ -6,6 +6,10 @@ description      'Manages an Elixir installation'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.12.0'
 
+%w(ubuntu debian redhat centos suse opensuse opensuseleap scientific oracle amazon).each do |os|
+  supports os
+end
+
 depends 'git'
 depends 'github'
 depends 'erlang'
