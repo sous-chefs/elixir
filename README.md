@@ -9,12 +9,12 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
 
 ## Attributes
 
-Key                                 | Type   | Description                                   | Default
------------------------------------ | ------ | --------------------------------------------- | ---------------------------------------------
-`node[:elixir][:install_path]`      | String | Path that Elixir will reside in               | "/usr/local/lib/elixir"
-`node[:elixir][:install_method]`    | String | Method of installation: "package" or "source" | "package"
-`node[:elixir][:source][:repo]`     | String | Git source repository location                | "<https://github.com/elixir-lang/elixir.git>"
-`node[:elixir][:source][:revision]` | String | Version of Elixir to compile                  | "v0.14.2"
+Key                              | Type   | Description                                   | Default
+-------------------------------- | ------ | --------------------------------------------- | ---------------------------------------------
+`node[:elixir][:install_path]`   | String | Path that Elixir will reside in               | "/usr/local/lib/elixir"
+`node[:elixir][:install_method]` | String | Method of installation: "package" or "source" | "package"
+`node[:elixir][:source][:repo]`  | String | Git source repository location                | "<https://github.com/elixir-lang/elixir.git>"
+`node[:elixir][:version]`        | String | Version of Elixir to compile                  | "v1.4.2"
 
 ## Usage
 
