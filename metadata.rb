@@ -50,3 +50,6 @@ attribute "elixir/source/repo",
   recipes: [
     "elixir::_source",
   ]
+source_url 'https://github.com/chef-cookbooks/elixir'
+issues_url 'https://github.com/chef-cookbooks/elixir/issues'
+chef_version '>= 12.1' if respond_to?(:chef_version)
