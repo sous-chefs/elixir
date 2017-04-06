@@ -2,7 +2,7 @@
 # Cookbook:: elixir
 # Attributes:: source
 #
-# Copyright:: (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: 2013-2017, Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 include_attribute 'elixir::default'
