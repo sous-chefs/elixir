@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the elixir cookbook.
 
+## 1.0.1 (2017-04-19)
+
+- Remove usage of the validate cookbook that is not chef 13 compatible
+
 ## 1.0.0 (2017-03-15)
 
 - This cookbook has been transferred to Chef to be maintained by the Cookbook Engineering team
