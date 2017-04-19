@@ -5,8 +5,6 @@
 # Copyright:: 2013-2017, Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-validate_attributes 'elixir'
-
 # Removes source installation before package/source methods were finalized in
 # version 0.8.0 of the Elixir cookbook. The install path should always be a
 # symlink. If it is not, then delete it and make sure it is.

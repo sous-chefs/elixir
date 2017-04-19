@@ -21,7 +21,6 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
 - github
 - erlang
 - libarchive
-- validation
 
 ## Attributes
 
