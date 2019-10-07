@@ -2,7 +2,7 @@
 # Cookbook:: elixir
 # Recipe:: default
 #
-# Copyright:: 2013-2017, Jamie Winsor (<jamie@vialstudios.com>)
+# Copyright:: 2013-2019, Jamie Winsor (<jamie@vialstudios.com>)
 #
 
 # Removes source installation before package/source methods were finalized in
