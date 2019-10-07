@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the elixir cookbook.
 
+## 1.1.0 (2019-10-07)
+
+- Require the latest libarchive cookbook on Chef 12.6+ - [@tas50](https://github.com/tas50)
+
 ## 1.0.1 (2017-04-19)
 
 - Remove usage of the validate cookbook that is not chef 13 compatible

@@ -3,7 +3,7 @@ maintainer       'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license          'Apache-2.0'
 description      'Manages an Elixir installation'
-version          '1.0.1'
+version          '1.1.0'
 
 %w(ubuntu debian redhat centos suse opensuse opensuseleap scientific oracle amazon).each do |os|
   supports os
