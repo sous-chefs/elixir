@@ -16,4 +16,4 @@ depends 'libarchive', '>= 2.0.0'
 
 source_url 'https://github.com/chef-cookbooks/elixir'
 issues_url 'https://github.com/chef-cookbooks/elixir/issues'
-chef_version '>= 12.6'
+chef_version '>= 12.15'
