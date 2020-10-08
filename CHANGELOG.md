@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Yamllint fixes
 
+### Added
+
+- Include mdlrc file
+
 ## 1.1.0 (2019-10-07)
 
 - Require the latest libarchive cookbook on Chef 12.6+ - [@tas50](https://github.com/tas50)
