@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove Amazon Linux 1 testing
 - Remove un-necessary directory creation
 - Remove CentOS 6 testing
+- Remove OpenSUSE testing
 
 ## 1.1.0 (2019-10-07)
 
