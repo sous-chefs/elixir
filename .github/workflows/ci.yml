@@ -40,7 +40,6 @@ jobs:
     strategy:
       matrix:
         os:
-          - 'amazonlinux'
           - 'debian-9'
           - 'debian-10'
           - 'centos-6'
