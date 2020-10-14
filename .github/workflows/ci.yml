@@ -40,13 +40,12 @@ jobs:
     strategy:
       matrix:
         os:
+          - 'centos-7'
           - 'debian-9'
           - 'debian-10'
-          - 'centos-6'
-          - 'centos-7'
           - 'fedora-latest'
-          - 'ubuntu-1604'
           - 'opensuse-leap-15'
+          - 'ubuntu-1604'
         suite:
           - 'package'
           - 'source'
