@@ -15,10 +15,6 @@ asset = github_asset 'Precompiled.zip' do
   release "v#{node['elixir']['version']}"
 end
 
-directory elixir_path do
-  recursive true
-end
-
 archive_file 'Precompiled.zip' do
   path asset.asset_path
   extract_to elixir_path

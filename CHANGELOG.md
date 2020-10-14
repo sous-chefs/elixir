@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove Amazon Linux 1 testing
+- Remove un-necessary directory creation
 
 ## 1.1.0 (2019-10-07)
 
