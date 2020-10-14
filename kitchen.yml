@@ -6,8 +6,12 @@ driver:
 
 provisioner:
   name: chef_zero
+  enforce_idempotency: true
+  multiple_converge: 2
   deprecations_as_errors: true
-  chef_license: accept-no-persist
+
+verifier:
+  name: inspec
 
 platforms:
   - name: centos-6
@@ -17,11 +21,7 @@ platforms:
   - name: fedora-latest
   - name: opensuse-leap-15
   - name: ubuntu-16.04
-    run_list:
-      - recipe[apt::default]
   - name: ubuntu-18.04
-    run_list:
-      - recipe[apt::default]
 
 suites:
   - name: package
