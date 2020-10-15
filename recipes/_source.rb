@@ -15,19 +15,20 @@ git 'elixir' do
   revision "v#{node['elixir']['version']}"
   destination node['elixir']['source']['_path']
   action :sync
+  notifies :run, 'bash[elixir-make-clean]', :immediately
+  notifies :run, 'bash[elixir-make]', :immediately
 end
 
 bash 'elixir-make-clean' do
   cwd node['elixir']['source']['_path']
   code 'make clean'
   action :nothing
-  subscribes :run, 'git[elixir]', :immediately
 end
 
 bash 'elixir-make' do
   cwd node['elixir']['source']['_path']
   code 'make'
-  action :run
+  action :nothing
 end
 
 link node['elixir']['install_path'] do

@@ -2,6 +2,41 @@
 
 This file is used to list changes made in each version of the elixir cookbook.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Unreleased
+
+### Changed
+
+- Sous Chefs Adoption
+- Update Changelog to Sous Chefs
+- Update to use Sous Chefs GH workflow
+- Update to Elixir 1.11.0
+- Update README to sous-chefs
+- Update metadata.rb to Sous Chefs
+- Update test-kitchen to Sous Chefs
+- Require newer erlang cookbook and Chef >= 14
+
+### Fixed
+
+- Yamllint fixes
+- Fix idempotency issues
+
+### Added
+
+- Include mdlrc file
+- Add CentOS 8 support
+- Add Ubuntu 18.04 and 20.04 support
+- Add basic InSpec tests
+
+### Removed
+
+- Remove Amazon Linux 1 testing
+- Remove un-necessary directory creation
+- Remove CentOS 6 testing
+- Remove OpenSUSE testing
+
 ## 1.1.0 (2019-10-07)
 
 - Require the latest libarchive cookbook on Chef 12.6+ - [@tas50](https://github.com/tas50)
