@@ -6,7 +6,7 @@ description       'Manages an Elixir installation'
 version           '1.1.0'
 source_url        'https://github.com/sous-chefs/elixir'
 issues_url        'https://github.com/sous-chefs/elixir/issues'
-chef_version      '>= 12.15'
+chef_version      '>= 14'
 
 supports 'amazon'
 supports 'centos'
@@ -18,6 +18,6 @@ supports 'ubuntu'
 
 depends 'git', '>= 5.0.0'
 depends 'github'
-depends 'erlang', '>= 3.0.0'
+depends 'erlang', '>= 8.1.0'
 depends 'libarchive', '>= 2.0.0'
 
