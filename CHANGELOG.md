@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Include mdlrc file
 - Add CentOS 8 support
 - Add Ubuntu 18.04 and 20.04 support
+- Add basic InSpec tests
 
 ### Removed
 
