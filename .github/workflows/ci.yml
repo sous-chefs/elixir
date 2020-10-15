@@ -44,13 +44,16 @@ jobs:
           - 'centos-8'
           - 'debian-9'
           - 'debian-10'
-          - 'opensuse-leap-15'
           - 'ubuntu-1604'
           - 'ubuntu-1804'
           - 'ubuntu-2004'
         suite:
           - 'package'
           - 'source'
+        exclude:
+          # ESL package doesn't exist in 20.04
+          - os: ubuntu-2004
+            suite: package
       fail-fast: false
 
     steps:
