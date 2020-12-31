@@ -20,4 +20,3 @@ depends 'git', '>= 5.0.0'
 depends 'github'
 depends 'erlang', '>= 8.1.0'
 depends 'libarchive', '>= 2.0.0'
-
