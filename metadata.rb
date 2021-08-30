@@ -6,7 +6,7 @@ description       'Manages an Elixir installation'
 version           '2.0.3'
 source_url        'https://github.com/sous-chefs/elixir'
 issues_url        'https://github.com/sous-chefs/elixir/issues'
-chef_version      '>= 14'
+chef_version      '>= 15'
 
 supports 'amazon'
 supports 'centos'
