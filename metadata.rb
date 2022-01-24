@@ -17,5 +17,5 @@ supports 'scientific'
 supports 'ubuntu'
 
 depends 'git', '>= 5.0.0'
-depends 'github'
+depends 'github', '>= 1.1.0'
 depends 'erlang', '>= 8.1.0'
