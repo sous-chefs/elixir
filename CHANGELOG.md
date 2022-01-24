@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Bump to require Chef Infra Client >= 15
+- Bump to require Chef Infra Client >= 15.3
 - resolved cookstyle error: metadata.rb:22:1 refactor: `Chef/Modernize/UnnecessaryDependsChef15`
 
 ## 2.0.3 - *2021-08-30*
