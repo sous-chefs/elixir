@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Remove delivery folder
+
 ## 3.0.0 - *2022-01-24*
 
 - Bump to require Chef Infra Client >= 15.3
