@@ -5,6 +5,13 @@ This file is used to list changes made in each version of the elixir cookbook.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.15](https://github.com/sous-chefs/elixir/compare/3.0.14...v3.0.15) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#47](https://github.com/sous-chefs/elixir/issues/47)) ([1631b34](https://github.com/sous-chefs/elixir/commit/1631b3442ea1a9bc5f19e67923a26fd86fb4fca9))
+
 ## 3.0.8 - *2023-06-07*
 
 Standardise files with files in sous-chefs/repo-management
