@@ -31,6 +31,12 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ## Usage
 
+### Breaking Change for Upgrades
+
+Upgrading from older cookbook versions that used `node['elixir']` attributes together with `include_recipe 'elixir::default'` is a breaking change. Those legacy attributes and recipes were removed when the cookbook moved to the `elixir_install` custom resource.
+
+Before upgrading an existing wrapper cookbook or role, replace recipe-based usage with an explicit `elixir_install` resource and move any previous attribute values onto resource properties. See [migration.md](migration.md) for the required changes.
+
 Use the `elixir_install` resource in your own cookbook.
 
 ### Install the default upstream package build

@@ -2,6 +2,12 @@
 
 This cookbook migrated from install-method recipes and attributes to a custom resource.
 
+## Breaking change
+
+This is a breaking change for operators upgrading from older cookbook versions. If your existing wrapper cookbook, role, or policyfile still sets `node['elixir']` attributes and converges `include_recipe 'elixir::default'`, you must update that code before upgrading to a release that uses the `elixir_install` resource.
+
+An in-place cookbook version bump without that migration will fail because the legacy `attributes/` data and recipe entry points no longer exist.
+
 ## What changed
 
 * `attributes/` was removed.
