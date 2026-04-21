@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "Elixir 1.19.5 (compiled with Erlang/OTP 26)"

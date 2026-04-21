@@ -6,7 +6,7 @@
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
+A cookbook to install [Elixir](https://elixir-lang.org/) with a custom resource.
 
 ## Maintainers
 
@@ -16,44 +16,63 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian/Ubuntu
-- RHEL/CentOS/Scientific/Amazon/Oracle
+* Ubuntu 22.04+
+* Debian 12+
+* RHEL compatible platforms supported through the `erlang` dependency path
 
 ### Chef
 
-- Chef 15.3+
+* Chef 15.3+
 
 ### Cookbooks
 
-- git
-- github
-- erlang
-- libarchive
-
-## Attributes
-
-Key                              | Type   | Description                                   | Default
--------------------------------- | ------ | --------------------------------------------- | ---------------------------------------------
-`node[:elixir][:install_path]`   | String | Path that Elixir will reside in               | "/usr/local/lib/elixir"
-`node[:elixir][:install_method]` | String | Method of installation: "package" or "source" | "package"
-`node[:elixir][:source][:repo]`  | String | Git source repository location                | "<https://github.com/elixir-lang/elixir.git>"
-`node[:elixir][:version]`        | String | Version of Elixir to compile                  | "v1.4.2"
+* erlang
+* git
 
 ## Usage
 
-Include `elixir` in your node's `run_list`
+Use the `elixir_install` resource in your own cookbook.
 
-```json
-{
-  "run_list": [
-    "recipe[elixir::default]"
-  ]
-}
+### Install the default upstream package build
+
+```ruby
+elixir_install 'default'
 ```
 
-### elixir::default
+This installs Elixir `1.19.5` from the official upstream precompiled archive, links it to `/usr/local/lib/elixir`, and manages `/usr/bin/elixir`, `/usr/bin/elixirc`, `/usr/bin/iex`, and `/usr/bin/mix`.
 
-This will install Elixir and Erlang on the node. By default, Elixir and Erlang will be installed from packages. If you want to install from source you can set the `node[:elixir][:install_method]` attribute.
+### Compile Elixir from source
+
+```ruby
+elixir_install 'default' do
+  install_method :source
+end
+```
+
+### Common properties
+
+| Property | Type | Default |
+| --- | --- | --- |
+| `version` | String | `"1.19.5"` |
+| `install_method` | Symbol | `:package` |
+| `install_path` | String | `"/usr/local/lib/elixir"` |
+| `versions_path` | String | `"/opt/elixir"` |
+| `otp_major` | String / Integer | `"28"` |
+| `package_url` | String | `"https://builds.hex.pm/builds/elixir/v#{version}-otp-#{otp_major}.zip"` |
+| `source_repo` | String | `"https://github.com/elixir-lang/elixir.git"` |
+| `source_revision` | String | `"v#{version}"` |
+| `source_path` | String | `"/opt/elixir/source"` |
+| `manage_erlang` | true / false | `true` |
+| `erlang_install_method` | Symbol | `:esl` |
+| `erlang_source_version` | String | `"26.2.5.19"` |
+
+See [documentation/elixir_elixir_install.md](documentation/elixir_elixir_install.md) for the full resource reference.
+
+## Notes
+
+* The resource models Elixir package and source installs explicitly. Package installs use the official Hex build archive for a specific Erlang/OTP major version.
+* By default, the resource manages Erlang via `erlang::esl` and installs the Elixir OTP 28 precompiled archive. If you need source-built Erlang instead, set `erlang_install_method :source` and optionally override `erlang_source_version`.
+* Current platform and dependency caveats are documented in [LIMITATIONS.md](LIMITATIONS.md).
 
 ## Contributors
 
