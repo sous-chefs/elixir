@@ -5,6 +5,22 @@ This file is used to list changes made in each version of the elixir cookbook.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0](https://github.com/sous-chefs/elixir/compare/v3.0.15...v4.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* wrapper cookbooks, roles, and policyfiles that set node['elixir'] attributes and include_recipe 'elixir::default' must migrate to the elixir_install resource before upgrading.
+
+### Features
+
+* migrate to custom resources ([#52](https://github.com/sous-chefs/elixir/issues/52)) ([585e14a](https://github.com/sous-chefs/elixir/commit/585e14a4714d8c009274e01cdcc9d6b216ed4ad6))
+
+
+### Bug Fixes
+
+* repair workflow secrets and permissions ([#53](https://github.com/sous-chefs/elixir/issues/53)) ([2298f25](https://github.com/sous-chefs/elixir/commit/2298f25fe3df8b073fe9b415d0fa3feae4d4c527))
+
 ## [3.0.15](https://github.com/sous-chefs/elixir/compare/3.0.14...v3.0.15) (2025-10-15)
 
 
