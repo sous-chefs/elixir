@@ -13,7 +13,7 @@ property :link_bin_path, String, default: '/usr/bin'
 property :manage_erlang, [true, false], default: true, desired_state: false
 property :erlang_install_method, Symbol, equal_to: %i(source esl package), default: :esl, desired_state: false
 property :erlang_source_version, String, default: '26.2.5.19', desired_state: false
-property :otp_major, [String, Integer], coerce: proc { |value| value.to_s }, default: '28'
+property :otp_major, [String, Integer], coerce: proc(&:to_s), default: '28'
 property :package_url, String, default: lazy { "https://builds.hex.pm/builds/elixir/v#{version}-otp-#{otp_major}.zip" }
 property :source_repo, String, default: 'https://github.com/elixir-lang/elixir.git'
 property :source_revision, String, default: lazy { "v#{version}" }
