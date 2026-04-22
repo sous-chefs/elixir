@@ -24,27 +24,17 @@ jobs:
     strategy:
       matrix:
         os:
-          - "centos-7"
-          - "centos-8"
-          - "debian-9"
-          - "debian-10"
-          - "ubuntu-1604"
-          - "ubuntu-1804"
-          - "ubuntu-2004"
+          - "ubuntu-2404"
         suite:
-          - "package"
+          - "default"
           - "source"
-        exclude:
-          # ESL package doesn't exist in 20.04
-          - os: ubuntu-2004
-            suite: package
       fail-fast: false
 
     steps:
       - name: Check out code
         uses: actions/checkout@v6
-      - name: Install Chef
-        uses: actionshub/chef-install@6.0.0
+      - name: Install Cinc Workstation
+        uses: sous-chefs/.github/.github/actions/install-workstation@6.0.0
       - name: Dokken
         uses: actionshub/test-kitchen@3.0.0
         env:

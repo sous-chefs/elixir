@@ -1,0 +1,7 @@
+---
+name: source
+title: Source Elixir Install
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies the source elixir_install resource path
+version: 1.0.0

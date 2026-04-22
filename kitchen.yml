@@ -4,34 +4,46 @@ driver:
   customize:
     memory: 2048
 
+transport:
+  max_wait_until_ready: 600
+  connection_retries: 10
+  connection_retry_sleep: 10
+
 provisioner:
-  name: chef_zero
+  name: chef_infra
+  product_name: chef
+  product_version: latest
+  channel: stable
+  chef_license: accept
   enforce_idempotency: true
   multiple_converge: 2
   deprecations_as_errors: true
 
 verifier:
   name: inspec
+  sudo: true
 
 platforms:
-  - name: centos-7
-  - name: centos-8
-  - name: debian-9
-  - name: debian-10
-  - name: ubuntu-16.04
-  - name: ubuntu-18.04
-  - name: ubuntu-20.04
+  - name: ubuntu-24.04
+
+x-run_lists:
+  default: &default_run_list
+    - recipe[test::default]
+  source: &source_run_list
+    - recipe[test::source]
+
+x-verifiers:
+  default: &default_verifier
+    inspec_tests:
+      - path: test/integration/default
+  source: &source_verifier
+    inspec_tests:
+      - path: test/integration/source
 
 suites:
-  - name: package
-    run_list:
-      - recipe[elixir::default]
-    attributes:
-      elixir:
-        install_method: "package"
+  - name: default
+    run_list: *default_run_list
+    verifier: *default_verifier
   - name: source
-    run_list:
-      - recipe[elixir::default]
-    attributes:
-      elixir:
-        install_method: "source"
+    run_list: *source_run_list
+    verifier: *source_verifier
