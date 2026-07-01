@@ -44,7 +44,7 @@ action :install do
       to package_install_path
     end
   when :source
-    include_recipe 'git::default'
+    git_client 'default'
 
     git new_resource.source_path do
       repository new_resource.source_repo
