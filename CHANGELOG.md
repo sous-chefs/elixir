@@ -5,6 +5,13 @@ This file is used to list changes made in each version of the elixir cookbook.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.1](https://github.com/sous-chefs/elixir/compare/v4.0.0...v4.0.1) (2026-07-09)
+
+
+### Bug Fixes
+
+* migrate to Policyfile and install git client ([#61](https://github.com/sous-chefs/elixir/issues/61)) ([98f7ac3](https://github.com/sous-chefs/elixir/commit/98f7ac36a030537416280e5ef5b5673cf55aa61a))
+
 ## [4.0.0](https://github.com/sous-chefs/elixir/compare/v3.0.15...v4.0.0) (2026-04-22)
 
 
