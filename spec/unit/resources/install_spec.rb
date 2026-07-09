@@ -34,7 +34,7 @@ describe 'elixir_install' do
       end
     end
 
-    it { is_expected.to include_recipe('git::default') }
+    it { is_expected.to install_git_client('default') }
     it do
       is_expected.to sync_git('/srv/elixir/source').with(
         repository: 'https://github.com/elixir-lang/elixir.git',
